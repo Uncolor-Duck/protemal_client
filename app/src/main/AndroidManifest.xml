@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.protemal3.activity">
+
+    <uses-feature android:name="android.hardware.camera" />
+    <!--相机权限-->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--写入SD卡的权限：如果你希望保存相机拍照后的照片-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--读取SD卡的权限:打开相册选取图片所必须的权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.Protemal3"
+            android:networkSecurityConfig="@xml/network_security_config">
+
+        <provider
+                android:name="androidx.core.content.FileProvider"
+                android:authorities="com.example.protemal3.fileprovider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".LoginActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".MainActivity"/>
+    </application>
+
+</manifest>

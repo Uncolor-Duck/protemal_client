@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="用户登录/LOGIN"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="50dp"
+    />
+    <View
+            style="@style/hLine"
+            android:layout_marginTop="40dp"
+    />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+        <TextView
+                style="@style/tvTwo"
+                android:text="性   名：" />
+        <EditText
+                android:id="@+id/lg_name"
+                style="@style/etOne" android:hint="@string/app_name" android:minHeight="48dp"/>
+    </LinearLayout>
+    <View style="@style/hLine" />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="15dp">
+        <TextView
+                style="@style/tvTwo"
+                android:text="密   码：" />
+        <EditText
+                android:id="@+id/lg_psw"
+                style="@style/etOne"
+                android:inputType="textPassword" android:minHeight="48dp" android:hint="@string/app_name"/>
+    </LinearLayout>
+    <View style="@style/hLine" />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
+    >
+        <Button
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="50dp"
+                android:text="登 录"
+                android:background="@color/gray"
+        />
+        <Button
+                android:id="@+id/btn_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="120dp"
+                android:text="注 册"
+                android:background="@color/gray"
+        />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_marginTop="75dp">
+        <Button
+                android:id="@+id/btn_test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="50dp"
+                android:text="测试"
+                android:background="@color/gray"/>
+
+    </LinearLayout>
+
+</LinearLayout>
